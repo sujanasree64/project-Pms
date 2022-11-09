@@ -10,6 +10,8 @@ import { ListPolicy } from './component/ListPolicy';
 import NavBar from './component/NavBar';
 import { UpdatePolicy } from './component/UpdatePolicy';
 import PolicyTypes from './component/PolicyTypes';
+import { ListUser } from './User Component/ListUser';
+import { AddUser } from './User Component/AddUser';
 function App() {
   return (
     <div >
@@ -23,7 +25,11 @@ function App() {
         <Route path="/" exact component={Home}  ></Route>
         <Route path="/updatepolicy/:Id"  component={UpdatePolicy}  ></Route>
         <Route path="/policytypes"  component={PolicyTypes}  ></Route>
-      
+        
+        <Route path="/listuser" component={ListUser}  ></Route>
+        <Route path="/adduser" component={AddUser}></Route>
+
+
       </Switch>
       </div>
     </BrowserRouter>
