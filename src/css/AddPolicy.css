@@ -1,0 +1,45 @@
+.can{
+    background-color: #e7ebf3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(29, 27, 27);
+
+}
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+
+.random{
+    font-family :
+"Xanh Mono rev=1";
+background-color: rgb(233, 221, 211);
+   
+
+}
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+.ran{
+    color: rgb(100, 105, 90);
+    font-family :
+"Xanh Mono rev=1";
+
+}
+.label{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(238, 228, 228);
+    
+}
+
+
+

@@ -26,10 +26,30 @@ export default class Home extends Component{
             <footer className="text-center text-black" style={{backgroundColor: "#f1f1f1"}}>
 
             <div className="container pt-4">
-            
-  
-        
+                <section className="mb-4">
+                <a className="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark">
               
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a className="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark">
+              
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a className="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark">
+              
+              <i class="bi bi-facebook"></i>
+            </a>
+                </section>
+            
             </div>
       
             <div className="text-center text-dark p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
@@ -43,3 +63,10 @@ export default class Home extends Component{
           )
     }
 }
+
+
+
+      
+      
+        
+             

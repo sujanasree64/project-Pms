@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PolicyService from "../service/PolicyService";
+import '../css/AddPolicy.css';
  export class AddPolicy extends Component {
     constructor(props){
         super(props);
@@ -85,13 +86,13 @@ import PolicyService from "../service/PolicyService";
             <div>
                 <br></br>
                 <div>
-                <div className="container">
-                <div className="card col-md-6 offset-md-3 offset-md-3">
-                            <h2>Policy Registration</h2>
-                        <div className="card-body">
+                <div className="container can">
+                <div className="card col-md-6 offset-md-3 offset-md-3 random">
+                            <h2>Policy Registration <i class="bi bi-person-circle"></i></h2>
+                        <div className="card-body ran">
                             <form>
                                 <div className="form-group">
-                                  <label >Policy Name</label>
+                                  <label >Policy Name </label>
                                   <input type="text" name="policyName" id="" className="form-control" placeholder="Enter PolicyName" 
                                    value={this.state.policyName} onChange={this.changePolicyNameHandler} />
                                 </div>

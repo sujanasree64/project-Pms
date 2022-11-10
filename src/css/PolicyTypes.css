@@ -1,0 +1,13 @@
+.card{
+    margin-top: 2rem;
+    margin: 2rem;
+    background-color: rgb(8, 6, 2);
+    font-size: calc(10px + 2vmin);
+    color: rgb(243, 236, 236);
+
+
+}
+.card-deck{
+    margin: 2rem;
+}
+

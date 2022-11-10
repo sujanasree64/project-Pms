@@ -1,7 +1,7 @@
 import React,{ Component } from "react";
 import image2 from '../assets/image2.jpg';
 import image3 from '../assets/image3.jpg';
-
+import '../css/PolicyTypes.css'
 import image5 from '../assets/image5.jpg';
  export default class PolicyTypes extends Component{
     render(){

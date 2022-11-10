@@ -15,7 +15,7 @@ export default class NavBar extends Component{
     render(){
         return(
             <nav class="navbar navbar-expand-lg navbar navbar sticky-top navbar navbar-dark bg-dark" >
-  <a class="navbar-brand" href="#">PMS</a>
+  <a class="navbar-brand" href="#"><i class="bi bi-p-square-fill"></i>MS </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,14 +31,15 @@ export default class NavBar extends Component{
         <a class="nav-link" href="/policytypes">Policy Types</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="/listpolicy">Status</a>
+        <a class="nav-link " href="/listpolicy">Status </a>
       </li>
       
       
     </ul>
-    <li class="nav-item">
-        <a class="nav-link " href="/contact">Account</a>
+    <li class="form-inline my-2 my-lg-0">
+        <a class="nav-link " href="/listuser"><i class="bi bi-person-circle"></i></a>
       </li>
+     
   </div>
 </nav>
         )

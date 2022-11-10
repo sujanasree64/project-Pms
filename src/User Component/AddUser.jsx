@@ -1,6 +1,6 @@
 import React,{ Component} from "react";
 import UserService from "../service/UserService";
-
+import '../css/AddUser.css';
 export class AddUser extends Component{
     constructor(props){
         super(props);
@@ -11,9 +11,10 @@ export class AddUser extends Component{
             userName: '',
             email: '',
             dob: '',
+          password:'',
             pNumber: '',
             salary: '',
-            userId: '',
+            // userId: '',
            
         }
         this.changeUserPanHandler = this.changeUserPanHandler.bind(this);
@@ -22,9 +23,10 @@ export class AddUser extends Component{
         this.changeUserNameHandler = this.changeUserNameHandler.bind(this);
         this.changeUserEmailHandler = this.changeUserEmailHandler.bind(this);
         this.changeUserDobHandler = this.changeUserDobHandler.bind(this);
+        this.changePasswordHandler= this.changePasswordHandler.bind(this);
         this.changeUserPnumberHandler = this.changeUserPnumberHandler.bind(this);
         this.changeUserSalHandler = this.changeUserSalHandler.bind(this);
-        this.changeUserIdHandler = this.changeUserIdHandler.bind(this);
+        // this.changeUserIdHandler = this.changeUserIdHandler.bind(this);
 
 
         this.saveUser = this.saveUser.bind(this)
@@ -38,14 +40,16 @@ export class AddUser extends Component{
             userName: this.state.userName,
             email: this.state.email,
             dob: this.state.dob,
+            
             pNumber: this.state.pNumber,
             salary: this.state.salary,
-            userId: this.state.userId
+            // userId: this.state.userId
         }
         console.log('user =>' + JSON.stringify(user))
         UserService.createUser(user).then(res => {
             alert("user added successfully....")
         })
+        this.props.history.push("/addaddress")
         
     }
     cancel(){
@@ -69,14 +73,18 @@ export class AddUser extends Component{
     changeUserDobHandler(event){
         this.setState({dob:event.target.value})
     }
+   
     changeUserPnumberHandler(event){
         this.setState({pNumber:event.target.value})
     }
     changeUserSalHandler(event){
         this.setState({salary:event.target.value})
     }
-    changeUserIdHandler(event){
-        this.setState({userId:event.target.value})
+    // changeUserIdHandler(event){
+    //     this.setState({userId:event.target.value})
+    // }
+    changePasswordHandler(event){
+        this.setState({password:event.target.value})
     }
     
 render() {
@@ -86,7 +94,7 @@ return (
         <div className="container">
             <div>
                 <div className="card col-md-6 offset-md-3 offset-md-3">
-                    <h2>Add User</h2>
+                    <h2>Add User <i class="bi bi-person-circle"></i></h2>
                 <div className="card-body">
                     <form>
                         <div className="form-group">
@@ -116,12 +124,13 @@ return (
                            value={this.state.email} onChange={this.changeUserEmailHandler} />
                         </div>
                         <div className="form-group">
-                          <label >Date of birth</label>
+                          <label >Date of birth <i class="bi bi-calendar3"></i></label>
                           <input type="date" name="date" id="" className="form-control" 
                            value={this.state.dob} onChange={this.changeUserDobHandler} />
                         </div>
+                        
                         <div className="form-group">
-                          <label >Phone Number</label>
+                          <label >Phone Number <i class="bi bi-person-plus-fill"></i></label>
                           <input type="number" name="pNumber" id="" className="form-control"  
                            value={this.state.pNumber} onChange={this.changeUserPnumberHandler} />
                         </div>
@@ -130,10 +139,15 @@ return (
                           <input type="number" name="pNumber" id="" className="form-control"  
                            value={this.state.salary} onChange={this.changeUserSalHandler} />
                         </div>
-                        <div className="form-group">
+                        {/* <div className="form-group">
                           <label >User Id</label>
                           <input type="number" name="userId" id="" className="form-control" 
                            value={this.state.userId} onChange={this.changeUserIdHandler} />
+                        </div> */}
+                        <div className="form-group">
+                          <label >PassWord</label>
+                          <input type="password" name="password" id="" className="form-control" 
+                           value={this.state.password} onChange={this.changePasswordHandler} />
                         </div>
                         <button type="button" className="btn btn-success" onClick={this.saveUser}>Add</button>
                         <button type="button" className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>

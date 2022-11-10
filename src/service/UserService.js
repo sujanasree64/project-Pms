@@ -10,11 +10,11 @@ class UserService{
     deleteUser(id){
         return axios.delete("http://localhost:8050/policy/pmsuser/deleteuserid/"+id);
     }
-    updateUser(user,id){
-        return axios.put("http://localhost:8050/policy/pmsuser/updateuser/"+id,user);
+    updateUser(user,userId){
+        return axios.put("http://localhost:8050/policy/pmsuser/updateuser/"+userId,user);
     }
     getUser(id){
-        return axios.get("http://localhost:8050/policy/pmsuser/findbyuserid"+id)
+        return axios.get("http://localhost:8050/policy/pmsuser/findbyuserid/"+id);
     }
 
 }
